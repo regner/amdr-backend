@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: amdr-backend
+  namespace: amdr
+spec:
+  ports:
+    - name: http
+      port: 8000
+  selector:
+    app: amdr-backend

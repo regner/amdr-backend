@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: amdr-backend
+  namespace: amdr
+  annotations:
+    kubernetes.io/ingress.class: "traefik"
+spec:
+  rules:
+    - host: amdr.regnerba.com
+      http:
+        paths:
+          - path: /api
+            backend:
+              serviceName: amdr-backend
+              servicePort: http
