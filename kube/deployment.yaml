@@ -17,7 +17,7 @@ spec:
         app: amdr-backend
     spec:
       containers:
-        - name: albion-backend
+        - name: amdr-backend
           image: us.gcr.io/personal-projects-1369/amdr/backend:latest
           imagePullPolicy: Always
           resources:
