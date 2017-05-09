@@ -1,8 +1,8 @@
-FROM google/golang
+FROM golang:1.8-alpine
 MAINTAINER Regner Blok-Andersen <shadowdf@gmail.com>
 
-ADD . /gopath/src/github.com/regner/amdr-backend
-WORKDIR /gopath/src/github.com/regner/amdr-backend
+ADD . /go/src/app
+WORKDIR /go/src/app
 RUN go get
 
 EXPOSE 8080
